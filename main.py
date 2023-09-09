@@ -1,6 +1,13 @@
-def factorial(n):
-  if n == 0:
+# Implementing a recursive function for a given factorial number.
+
+
+def fact_rec(n):
+  if n == 0 or n == 1:
     return 1
   else:
-    return n * factorial(n - 1)
-print(factorial(5))
+    return n * fact_rec(n - 1)
+
+
+number = 7
+res =  fact_rec(number)
+print("the factorial of is {} is {}.".format(number, res))
